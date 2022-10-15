@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1" parallel="tests" thread-count="6">
+
+    <!--In First test case selenium Automate in Safari Browser. -->
+    <test name="test1">
+        <parameter name="browser" value="safari"/>
+        <parameter name="username" value="jujjwal81@gmail.com"/>
+        <parameter name="password" value="tempPassword81!"/>
+        <parameter name="SignInOption" value="IMDB"></parameter>
+        <classes>
+            <class name="TestSignIn"></class>
+        </classes>
+    </test>
+
+    <!--In Second test case selenium Automate in Chrome Browser. -->
+    <test name="test2">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="username" value="jujjwal81@gmail.com"/>
+        <parameter name="password" value="tempPassword81!"/>
+        <parameter name="SignInOption" value="IMDB"></parameter>
+        <parameter name="selectCategory" value="Titles"></parameter>
+        <parameter name="movieName" value="Logan"></parameter>
+        <classes>
+            <class name="TestSignIn"></class>
+            <class name="TestSearchMovie"></class>
+        </classes>
+    </test>
+
+</suite>
+
